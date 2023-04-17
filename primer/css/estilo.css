@@ -1,0 +1,20 @@
+
+.tabla_a {
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+.tabla_a th,
+.tabla_a td {
+  padding: 10px;
+  text-align: center;
+}
+
+.tabla_a th {
+  background-color: #ccc;
+}
+
+.tabla_a td {
+  border: 1px solid #ccc;
+}
