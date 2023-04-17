@@ -1,0 +1,88 @@
+
+create table persona
+(	ci int primary key ,
+	nombre_com varchar(20),
+	fecha_nac varchar(20),
+	telefono varchar(20),
+	depto varchar(10),
+	id_rol varchar(50)
+)
+create table usuario
+(	ci int,
+	user varchar(30),
+	password varchar(20),
+	foreign key(ci) references persona(ci)
+)
+create table inscripcion
+(
+	ci int,
+	sigla varchar(30),
+	nota1 int,
+	nota2 int,
+	nota3 int,
+	notaF int,
+	foreign key(ci) references persona(ci)
+)
+create table rol
+(
+	id_rol int primary key AUTO_INCREMENT,
+	nom_rol varchar(30)
+)
+
+insert into usuario  values('8596235','Quispe Laura Mario','15/02/1985','(591)78959623','02','1');
+insert into persona  values('6962120','Ali Averanga Erika Cecilia','27/03/2004','(591)69410592 ','03','2');
+insert into persona  values('3037257','Anze Orellana Juan Gabriel ','02/02/2002','(591)69442003','03','2');
+insert into persona  values('3557566','Mitta Chambi Miguel Angel','10/08/1990','(591)75463365','01','3');
+insert into persona  values('5060421','Chambi Santos Jose','22/11/2002','(591)75478526','04','2');
+insert into persona  values('3469800','Chiri Miranda Macario','19/09/1987','(591)76415229','01','3');
+insert into persona  values('6107751','Jauregui Chura Veronica','14/01/2003','(591)66456522','05','2');
+insert into persona  values('6020707','Tellez Noya Pedro','01/06/2004','(591)67461562','06','2');
+insert into persona  values('4976039','Lopez Pinto Maria Elena','07/06/2000','(591)68471553','04','2');
+insert into persona  values('4877242','Mamani Rojas Braulio','15/12/2003','(591)66488810','01','2');
+insert into persona  values('4246936','Gutierrez Copaja Geronimo','25/05/1982','(591)75481690','02','3');
+insert into persona  values('6948311','Mamani Chipana Mariano','26/03/2004','(591)69544856','02','2');
+insert into persona  values('9229511','Paz Lopez Maria Paola','18/04/2001','(591)75945689','03','2');
+insert into persona  values('3045707','Mamani Mendoza Iver','22/05/2002','(591)75491256','07','2');
+insert into persona  values('8793155','Mitta Chacolla Susana','15/09/2003','(591)65559415','02','2');
+insert into persona  values('8298124','Quisbert Calle Graciela','15/12/1997','(591)74040470','02','4');
+
+
+insert into usuario  values('3469800','macarioM','123456a');
+insert into usuario  values('6107751','veronicaJ','123456b');
+insert into usuario  values('9229511','paolaP','123456c');
+insert into usuario  values('3045707','iverM','123456d');
+insert into usuario  values('4246936','geronimoG','123456e');
+insert into usuario  values('4976039','elenaL','123456f');
+insert into usuario  values('4877242','braulioM','123456g');
+insert into usuario  values('6020707','pedroT','123456h');
+insert into usuario  values('6948311','marianoM','123456i');
+insert into usuario  values('5060421','joseC','123456j');
+insert into usuario  values('8596235','DIRECTOR','123456k');
+insert into usuario  values('6962120','ceciliaA','123456l');
+insert into usuario  values('8793155','susanaM','123456m');
+insert into usuario  values('3037257','gabrielA','123456n');
+insert into usuario  values('3557566','angelM','123456o');
+insert into usuario  values('3557566','angelM','123456o');
+insert into usuario  values('8298124','adminG','123456');
+
+insert into inscripcion  values('6107751','INF-330',45,84,86,0);
+insert into inscripcion  values('6020707','INF-324',85,95,52,0);
+insert into inscripcion  values('4976039','INF-324',26,45,0,0);
+insert into inscripcion  values('4877242','INF-319',56,52,78,0);
+insert into inscripcion  values('6948311','INF-330',62,84,75,0);
+insert into inscripcion  values('9229511','INF-324',84,80,88,0);
+insert into inscripcion  values('3037257','INF-324',56,95,25,0);
+insert into inscripcion  values('5060421','INF-330',56,53,95,0);
+insert into inscripcion  values('6962120','INF-324',48,15,55,0);
+insert into inscripcion  values('3045707','INF-319',35,0,0,0);
+insert into inscripcion  values('8793155','INF-319',15,65,88,0);
+
+insert into rol  values('1','Director');
+insert into rol  values('2','Docente');
+insert into rol  values('3','Estudiante');
+insert into rol  values('4','ADMIN');
+
+
+
+
+
